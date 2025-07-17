@@ -2,7 +2,6 @@ export default async function DocsSlug({
     params
 }: { params: Promise<{ slug: string[] }> }) {
     const { slug } = await params
-    
     if (slug?.length === 2) {
         return (
             <h1>
@@ -10,7 +9,7 @@ export default async function DocsSlug({
             </h1>
         )
     }
-    
+
     if (slug?.length === 1) {
         return (
             <h1>
@@ -18,7 +17,7 @@ export default async function DocsSlug({
             </h1>
         )
     }
-    
+
     return (
         <h1>
             Documentation - Dynamic Route
